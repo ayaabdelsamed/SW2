@@ -50,29 +50,8 @@
         }
     }
 });
-
-
-
-/*=============== cart variables ===============*/
-
-let bookDiv = document.getElementById("bookkk");
-s="The Giver  $11.19";
-
-let  arrayOfBooks=[];
-
-// if there is books add in localstorage
-if(localStorage.getItem("bookkk")){
-    arrayOfBooks=JSON.parse(localStorage.getItem("bookkk"));
-}
-getDataFromLocalStorage();
- 
-
-//remove element from page 
-
-
-
-/*=============== LOGIN ===============*/
- cartButton = document.getElementById('cart-button'),
+//////////////////////////////////////////////////////////
+cartButton = document.getElementById('cart-button'),
  cartButton1 = document.getElementById('button1'),
  cartButton2 = document.getElementById('button2'),
  cartButton3 = document.getElementById('button3'),
@@ -83,53 +62,103 @@ getDataFromLocalStorage();
  cartButton8 = document.getElementById('button8'),
  cartButton9 = document.getElementById('button9'),
  cartButton10 = document.getElementById('button10'),
+ cartButton11=document.getElementById('button111'),
 
       cartClose = document.getElementById('cart-close'),
       cartContent = document.getElementById('cart-content')
 
-/*=============== cart Show ===============*/
+/*===============  ===============*/
 
-if(cartButton){
+s="The Giver  $11.19";
+
     cartButton.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        
     })
     cartButton1.addEventListener('click',() =>{
         cartContent.classList.add('show-cart');
        
-        addBookToArray(s);
+        addBookToArray("The Lord Of The King");
     })
     cartButton3.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Simple&Minimalist");
     })
     cartButton2.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Muted Poster");
     })
     cartButton4.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Pouring Dreams");
     })
     cartButton5.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Customize Clothes");
     })
     cartButton6.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Designed For Work");
     })
     cartButton7.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Plant Tree");
     })
     cartButton8.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Modern Poster");
+
     })
     cartButton9.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Bird Park");
+
     })
     cartButton10.addEventListener('click',() =>{
-        cartContent.classList.add('show-cart')
+        cartContent.classList.add('show-cart');
+        addBookToArray("Memories of sword");
         
     })
    
-}
-/*=============== cart Hidden ===============*/
 
+////////////////////////////////////////////////////////////////////
+
+
+
+/*=============== cart variables ===============*/
+
+let bookDiv = document.getElementById("bookkk");
+
+
+
+let  arrayOfBooks=[];
+
+// if there is books add in localstorage
+if(localStorage.getItem("bookkk")){
+    arrayOfBooks=JSON.parse(localStorage.getItem("bookkk"));
+}
+getDataFromLocalStorage();
+ 
+
+
+
+
+
+/*=============== close the cart ===============*/
+if (cartClose) {
+    cartClose.addEventListener('click', () => {
+        cartContent.classList.remove('show-cart');
+       
+    });
+}
+/*=============== purchase ===============*/
+
+if(cartButton11){
+    cartButton11.addEventListener('click', () =>{
+        cartButton11.classList.remove('show-cart')
+        window.location.href = 'https://app.fatora.io/register/?src=www.google.com&for=pg&lang=ar';
+    })
+}
 if(cartClose){
     cartClose.addEventListener('click', () =>{
         cartContent.classList.remove('show-cart')
@@ -180,7 +209,7 @@ function addElementToPageForm(arrayOfBooks) {
         div.style.padding = "10px"; 
         div.style.display = "flex"; 
         let textSpan = document.createElement("span");
-        textSpan.textContent = s;
+        textSpan.textContent = book.title;
         textSpan.style.paddingTop="7px"
         textSpan.style.flex = "1"; 
         textSpan.style.fontWeight = "bold"; 
