@@ -16,6 +16,7 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Book Website</title>
 </head>
@@ -23,13 +24,40 @@
 <body>
   
     <!--==================== Main ====================-->
-   
+    
+    <div class="cart grid" id="cart-content">
+        <div class="cart__form grid">
+            <h3 class="cart__title">add product to cart</h3>
+            <div class="cart__group grid">
+               
+                <div id="bookkk">
+                    
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="cart__button button">
+                   PURCHASE
+                </button>
+            </div>
+        </div>
+        <i class="ri-close-line cart__close" id="cart-close"></i>
 
+    </div>
+     <!--==================== books cart ====================-->
+    
+    
         <!--==================== FEATURED ====================-->
         <section class="featured section" id="featured">
             <h2 class="section__title">
                 featured Books
+                <i class="fa fa-shopping-cart" id="cart-button" style="font-size:24px ;margin-left :200px"></i>
             </h2>
+
+           
+            <div>
+                
+            </div>
+
             <div class="featured__container container">
                 <div class="featured__swiper swiper">
                     <div class="swiper-wrapper">
@@ -41,7 +69,9 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button1">Add To Cart</button>
+                            
+                           
 
                             <div class="featured__action">
 
@@ -54,6 +84,7 @@
                             </div>
 
                         </article>
+                       
 
                         <article class="featured__card swiper-slide">
                             <img src="assets/img/book-2.png" alt="image" class="featured__img">
@@ -63,7 +94,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button"id="button2">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -74,7 +105,6 @@
                                 <button><i class="ri-eye-line"></i></button>
 
                             </div>
-
                         </article>
                         <article class="featured__card swiper-slide">
                             <img src="assets/img/book-3.png" alt="image" class="featured__img">
@@ -84,7 +114,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button3">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -104,7 +134,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button4">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -125,7 +155,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button5">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -146,7 +176,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button6">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -167,7 +197,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button7">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -186,7 +216,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button8">Add To Cart</button>
 
                             <div class="featured__action">
 
@@ -207,7 +237,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button9">Add To Cart</button>
 
                             <div class="featured__action">
                                 <!-- Assuming you're using Remix Icon -->
@@ -228,7 +258,7 @@
                                 <span class="featured__price">$19.99</span>
                             </div>
 
-                            <button class="button">Add To Cart</button>
+                            <button class="button" id="button10">Add To Cart</button>
 
                             <div class="featured__action">
 
